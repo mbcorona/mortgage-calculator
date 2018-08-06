@@ -135,11 +135,11 @@ button.btn-blue{
 .result-section{
   max-height: 0;
   overflow: hidden;
-  transition: max-height 5s ease-out;
+  transition: max-height .9s ease-out;
 }
 .result-section.show{
   max-height: 500px;
-  transition: max-height 5s ease;
+  transition: max-height .9s ease;
 }
 .result-area{
   background-color: #eaf6fa;
