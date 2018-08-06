@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mortgage Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <h2 class="mortgage-title">Mortgage Calculator</h2>
+    <hr>
+    <div class="container">
+      <div class="calculator-section">
+        <form method="post" onsubmit="return false;" id="calculator-form">
+          <p>Change values to calculate your results</p>
+          <hr>
+
+          <div class="form-group">
+            <label for="years">Years of mortgage</label>
+            <div class="range-container">
+              1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="range" name="years" min="1" max="40" id="years-of-mortgage" value="30" >&nbsp;&nbsp;40
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="rate">Rate of interest</label>
+            <div class="range-container">
+              0.1&nbsp;&nbsp;<input type="range" min="0.1" step=".1" max="10" name="rate" id="interest-rate" value="8">&nbsp;&nbsp;10
+            </div>
+          </div>
+
+          <br>
+          <div class="form-group">
+            <label for="loan">Loan Amount</label>
+            <div class="currencyinput">
+              <span class="dollar-sign">$</span>
+              <input type="text" id="loan-amount">
+              <small class="label-error">Mandatory field</small>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-50">
+              <div class="form-group">
+                <label for="loan">Annual Tax</label>
+                <div class="currencyinput">
+                  <span class="dollar-sign">$</span>
+                  <input type="text" id="annual-tax">
+                  <small class="label-error">Mandatory field</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-50">
+              <div class="form-group">
+                <label for="loan">Annual Insurance</label>
+                <div class="currencyinput">
+                  <span class="dollar-sign">$</span>
+                  <input type="text" id="annual-insurance">
+                  <small class="label-error">Mandatory field</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-blue" name="button">Calculate</button>
+        </form>
+      </div>
+
+      <div class="result-section">
+        <div class="result-area">
+          <br>
+          <h4 class="your-results-text">Your results</h4>
+          <br>
+          <table class="result-table">
+            <tbody>
+              <tr>
+                <td>Principle & Interest</td>
+                <td id="result-principle-interest" class="text-rigth">--</td>
+              </tr>
+              <tr>
+                <td>Tax</td>
+                <td id="result-tax" class="text-rigth">--</td>
+              </tr>
+              <tr>
+                <td>Insurance</td>
+                <td id="result-insurance" class="text-rigth">--</td>
+              </tr>
+              <tr>
+                <td>Total Monthly Payment</td>
+                <td id="result-monthly-payment" class="f-s-15 text-rigth">--</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  <script src="scripts/app.js"></script>
+  </body>
+</html>
