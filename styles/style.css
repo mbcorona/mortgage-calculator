@@ -88,7 +88,7 @@ hr{
   font-size: 20px;
   line-height: 40px;
 }
-.currencyinput > input[type="text"]{
+.currencyinput > input[type="number"]{
   border: 1px solid #999;
   height: 40px;
   line-height: 40px;
@@ -98,11 +98,11 @@ hr{
   font-size: 20px;
   box-sizing: border-box;
 }
-.currencyinput > input[type="text"]:focus{
+.currencyinput > input[type="number"]:focus{
   outline-color: rgba(0,0,0,.15);
   outline-width: 3px;
 }
-.currencyinput > input[type="text"].error{
+.currencyinput > input[type="number"].error{
   border-color: red;
 }
 .label-error{
@@ -146,11 +146,11 @@ button.btn-blue{
 .result-section{
   max-height: 0;
   overflow: hidden;
-  transition: max-height .9s ease-out;
+  transition: max-height 1s ease;
 }
 .result-section.show{
   max-height: 500px;
-  transition: max-height .9s ease;
+  transition: max-height 1s ease;
 }
 .result-area{
   background-color: #eaf6fa;

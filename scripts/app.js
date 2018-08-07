@@ -71,6 +71,9 @@
     app.template.monthlyPayment.innerHTML = "$" + app.result.monthlyPayment.toFixed(2);
 
     app.template.resultSection.classList.add("show");
+    setTimeout(function(){
+      location.href = "#result-section";
+    },1000);
   };
 
   app.clearResult = function(hideResultSection){
@@ -93,7 +96,7 @@
     app.template.interestRateValue.innerHTML =
       app.interestRate.value;
   });
-  
+
   // submit event for Calculator
   document.getElementById('calculator-form')
   .addEventListener('submit', function(e){
