@@ -12,6 +12,8 @@
       monthlyPayment: 0
     },
     template: {
+      yearsOfMortgageValue: document.getElementById('years-of-mortgage-value'),
+      interestRateValue: document.getElementById('interest-rate-value'),
       principleAndInterest: document.getElementById('result-principle-interest'),
       tax: document.getElementById('result-tax'),
       insurance: document.getElementById('result-insurance'),
@@ -82,6 +84,16 @@
     }
   }
 
+  app.yearsOfMortgage.addEventListener('change', function(){
+    app.template.yearsOfMortgageValue.innerHTML =
+      app.yearsOfMortgage.value;
+  });
+
+  app.interestRate.addEventListener('change', function(){
+    app.template.interestRateValue.innerHTML =
+      app.interestRate.value;
+  });
+  
   // submit event for Calculator
   document.getElementById('calculator-form')
   .addEventListener('submit', function(e){
