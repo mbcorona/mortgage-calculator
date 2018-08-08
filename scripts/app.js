@@ -1,4 +1,5 @@
 (function(){
+
   var app = {
     interestRate: document.getElementById('interest-rate'),
     yearsOfMortgage: document.getElementById('years-of-mortgage'),
@@ -94,7 +95,7 @@
 
   app.interestRate.addEventListener('change', function(){
     app.template.interestRateValue.innerHTML =
-      app.interestRate.value;
+      parseFloat(app.interestRate.value).toFixed(1);
   });
 
   // submit event for Calculator
