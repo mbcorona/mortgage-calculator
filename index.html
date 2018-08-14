@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <h2 class="mortgage-title">Mortgage Calculator</h2>
+    <h2 class="text-title">Mortgage Calculator</h2>
     <hr>
     <div class="container">
       <div class="calculator-section">
@@ -18,7 +18,6 @@
           <div class="form-group">
             <label for="years">Years of mortgage</label>
             <span id="years-of-mortgage-value" class="range-value">
-              30
             </span>
             <div class="range-container">
               1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="range" name="years" min="1" max="40" id="years-of-mortgage" value="30" >&nbsp;&nbsp;40
@@ -29,7 +28,6 @@
           <div class="form-group">
             <label for="rate">Rate of interest (%)</label>
             <span id="interest-rate-value" class="range-value">
-              8.0
             </span>
             <div class="range-container">
               0.1&nbsp;&nbsp;<input type="range" min="0.1" step=".1" max="10" name="rate" id="interest-rate" value="8">&nbsp;&nbsp;10
@@ -69,32 +67,32 @@
             </div>
           </div>
           <br>
-          <button type="submit" class="btn btn-blue" name="button">Calculate</button>
+          <button id="submit-btn" type="submit" class="btn btn-blue" name="button">Calculate</button>
         </form>
       </div>
 
       <div id="result-section" class="result-section">
         <div class="result-area">
           <br>
-          <h4 class="your-results-text">Your results</h4>
+          <h3>Your results</h3>
           <br>
           <table class="result-table">
             <tbody>
               <tr>
                 <td>Principle & Interest</td>
-                <td id="result-principle-interest" class="text-rigth">--</td>
+                <td id="result-principle-interest" class="text-rigth">$ --</td>
               </tr>
               <tr>
                 <td>Tax</td>
-                <td id="result-tax" class="text-rigth">--</td>
+                <td id="result-tax" class="text-rigth">$ --</td>
               </tr>
               <tr>
                 <td>Insurance</td>
-                <td id="result-insurance" class="text-rigth">--</td>
+                <td id="result-insurance" class="text-rigth">$ --</td>
               </tr>
               <tr>
                 <td>Total Monthly Payment</td>
-                <td id="result-monthly-payment" class="f-s-15 text-rigth">--</td>
+                <td id="result-monthly-payment" class="f-s-15 text-rigth">$ --</td>
               </tr>
             </tbody>
           </table>
