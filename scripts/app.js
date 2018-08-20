@@ -75,8 +75,11 @@
 
     app.template.resultSection.classList.add("show");
     setTimeout(()=>{
-      location.href = "#result-section";
-    },1000);
+      document.getElementById("result-section").scrollIntoView({
+          behavior: 'smooth'
+      });
+      //location.href = "#result-section";
+    },200);
   };
 
   app.clearResult = (hideResultSection)=>{
