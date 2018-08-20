@@ -30,6 +30,7 @@ p{
 .form-group > *{
   display: block;
 }
+
 /*sections*/
 .calculator-section{
   position: relative;
@@ -134,7 +135,7 @@ input.error{
   color: red;
   display: none;
 }
-.error + .label-error{
+.error ~ .label-error{
   display: block;
 }
 .currencyinput input.error:focus{
@@ -193,8 +194,20 @@ button.btn-blue{
   font-size: 15px;
 }
 
+
+.show-desktop{
+  display: block;
+}
+.show-mobile{
+  display: none;
+}
+
 /*desktop styles*/
 @media (min-width: 800px) {
+  .hide-desktop{
+    display: none !important;
+  }
+
   /*sections*/
   .calculator-section{
     width: 75%;
@@ -221,5 +234,11 @@ button.btn-blue{
   }
   .result-table tr:last-child td:first-child{
     border-top: 1px solid #b2b2b2;
+  }
+}
+/*mobile styles*/
+@media (max-width: 799px) {
+  .hide-mobile{
+    display: none !important;
   }
 }
