@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <h2 class="text-title">Mortgage Calculator</h2>
+    <h2 class="text-title font-22">Mortgage Calculator</h2>
     <hr>
     <div class="container">
       <div class="calculator-section">
         <form method="post" onsubmit="return false;" id="calculator-form">
-          <p>Change values to calculate your results</p>
+          <p class="font-16">Change values to calculate your results</p>
           <hr>
 
           <div class="form-group">
-            <label for="years">Years of mortgage</label>
+            <label class="font-14 font-bold" for="years">Years of mortgage</label>
             <span id="years-of-mortgage-value" class="range-value">
             </span>
             <div class="range-container">
@@ -26,7 +26,7 @@
           </div>
 
           <div class="form-group">
-            <label for="rate">Rate of interest (%)</label>
+            <label class="font-14 font-bold" for="rate">Rate of interest (%)</label>
             <span id="interest-rate-value" class="range-value">
             </span>
             <div class="range-container">
@@ -36,7 +36,7 @@
 
           <br>
           <div class="form-group">
-            <label for="loan">Loan Amount</label>
+            <label class="font-14 font-bold" for="loan">Loan Amount</label>
             <div class="currencyinput">
               <span class="dollar-sign">$</span>
               <input type="number" id="loan-amount">
@@ -48,7 +48,7 @@
           <div class="row">
             <div class="col-50">
               <div class="form-group">
-                <label for="loan">Annual Tax</label>
+                <label class="font-14 font-bold" for="loan">Annual Tax</label>
                 <div class="currencyinput">
                   <span class="dollar-sign">$</span>
                   <input type="number" id="annual-tax">
@@ -59,7 +59,7 @@
             </div>
             <div class="col-50">
               <div class="form-group">
-                <label for="loan">Annual Insurance</label>
+                <label class="font-14 font-bold" for="loan">Annual Insurance</label>
                 <div class="currencyinput">
                   <span class="dollar-sign">$</span>
                   <input type="number" id="annual-insurance">
@@ -77,7 +77,7 @@
       <div id="result-section" class="result-section">
         <div class="result-area">
           <br>
-          <h3>Your results</h3>
+          <p class="font-22 font-weight-normal">Your results</p>
           <br>
           <table class="result-table">
             <tbody>

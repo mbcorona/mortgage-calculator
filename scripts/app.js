@@ -1,6 +1,6 @@
 (function(){
 
-  let app = {
+  var app = {
     interestRate: document.getElementById('interest-rate'),
     yearsOfMortgage: document.getElementById('years-of-mortgage'),
     loanAmount: document.getElementById('loan-amount'),
@@ -25,10 +25,10 @@
     }
   };
 
-  app.validate = ()=>{
-    let valid = true;
-    let required = ["loanAmount", "annualTax", "annualInsurance"];
-    required.forEach(r => {
+  app.validate = function(){
+    var valid = true;
+    var required = ["loanAmount", "annualTax", "annualInsurance"];
+    required.forEach(function(r) {
       if(!app[r].value){
         valid = false;
         app[r].classList.add("error");
@@ -40,7 +40,7 @@
     return valid;
   };
 
-  app.calculate = ()=>{
+  app.calculate = function(){
 
     if(!app.validate())return false;
 
@@ -67,14 +67,14 @@
     }
   };
 
-  app.printResult = ()=>{
+  app.printResult = function(){
     app.template.principleAndInterest.innerHTML = "$" + app.result.principleAndInterest.toFixed(2);
     app.template.tax.innerHTML = "$" + app.result.tax.toFixed(2);
     app.template.insurance.innerHTML = "$" + app.result.insurance.toFixed(2);
     app.template.monthlyPayment.innerHTML = "$" + app.result.monthlyPayment.toFixed(2);
 
     app.template.resultSection.classList.add("show");
-    setTimeout(()=>{
+    setTimeout(function(){
       document.getElementById("result-section").scrollIntoView({
           behavior: 'smooth'
       });
@@ -82,7 +82,7 @@
     },200);
   };
 
-  app.clearResult = (hideResultSection)=>{
+  app.clearResult = function(hideResultSection){
     app.template.principleAndInterest.innerHTML = "";
     app.template.tax.innerHTML = "";
     app.template.insurance.innerHTML = "";
@@ -95,8 +95,8 @@
 
 
   // event liseners
-  app.yearsOfMortgage.addEventListener('change', ()=>{
-    let val = app.yearsOfMortgage.value;
+  app.yearsOfMortgage.addEventListener('change', function(){
+    var val = app.yearsOfMortgage.value;
     app.template.yearsOfMortgageValue.innerHTML = val;
     app.yearsOfMortgage.style['background-image'] =
                   '-webkit-gradient(linear, left top, right top, '
@@ -105,8 +105,8 @@
                   + ')';
   });
 
-  app.interestRate.addEventListener('change', ()=>{
-    let val = app.interestRate.value;
+  app.interestRate.addEventListener('change', function(){
+    var val = app.interestRate.value;
     app.template.interestRateValue.innerHTML = parseFloat(val).toFixed(1);
     app.interestRate.style['background-image'] =
                     '-webkit-gradient(linear, left top, right top, '
@@ -116,16 +116,18 @@
   });
 
   // submit event for Calculator
-  app.appForm.addEventListener('submit', ()=>{
+  app.appForm.addEventListener('submit', function(){
     if(app.calculate()){
       app.submitBtn.innerHTML = 'recaulculate';
       app.printResult();
     }
   });
 
-  app.init = ()=>{
-    app.interestRate.dispatchEvent(new Event('change'));
-    app.yearsOfMortgage.dispatchEvent(new Event('change'));
+  app.init = function(){
+    var e = document.createEvent('HTMLEvents');
+    e.initEvent('change', false, true);
+    app.interestRate.dispatchEvent(e);
+    app.yearsOfMortgage.dispatchEvent(e);
   }
   app.init();
 
