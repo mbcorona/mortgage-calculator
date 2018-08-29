@@ -11,6 +11,11 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .font-bold{
   font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 0.2px;
+  color: #3e3d3f;
+  opacity: .9;
 }
 .font-weight-normal{
   font-weight: normal;
@@ -38,7 +43,9 @@ h1,h2,h3,h4,h5,h6,p{
   margin: 0 auto;
 }
 hr{
-  border: solid .5px rgba(0,0,0,.4);
+  border: solid .5px rgba(0,0,0,.3);
+  border-bottom: none;
+  margin-top: 12px;
   margin-bottom: 20px;
 }
 p{
@@ -52,7 +59,7 @@ p{
   text-align: right;
 }
 .opacity-5{
-  opacity: .5;
+  opacity: .5 !important;
 }
 .form-group > *{
   display: block;
@@ -335,6 +342,11 @@ input.error{
   }
   .result-table tr td:last-child{
     font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;
+    color: #3e3d3f;
+    opacity: .9;
   }
   .result-table tr:last-child td:first-child{
     border-top: 1px solid #b2b2b2;
