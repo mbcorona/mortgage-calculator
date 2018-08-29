@@ -261,6 +261,9 @@ input.error{
   background-color: #0077c0;
   color: #fff;
 }
+.btn-blue:focus{
+  background-color: #0077C5;
+}
 
 /*table style*/
 .result-table{
