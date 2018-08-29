@@ -316,6 +316,11 @@ input.error{
 
 /*desktop styles*/
 @media (min-width: 800px) {
+
+  .font-18-desktop{
+      font-size: 18px;
+  }
+
   .hide-desktop{
     display: none !important;
   }

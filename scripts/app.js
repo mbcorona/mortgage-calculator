@@ -35,8 +35,6 @@
     }
   };
 
-  console.log(app.browser)
-
   app.validate = function() {
     var valid = true;
     app.requiredFields.forEach(function(r) {
